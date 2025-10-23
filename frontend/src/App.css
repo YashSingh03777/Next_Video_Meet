@@ -1,0 +1,190 @@
+/* === Background and Global Styles === */
+.landingPageContainer {
+  background: linear-gradient(135deg, rgb(1, 4, 48) 40%, rgb(20, 20, 60));
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-img {
+  max-width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* === Floating Side Buttons === */
+.floatingSideButtons {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.side-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffb347;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(255, 179, 71, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.side-btn:hover {
+  background: #ff9839;
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 152, 57, 0.6);
+}
+
+/* === Hero Section Text === */
+.text-light-50 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* === Footer === */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === Responsiveness === */
+@media (max-width: 992px) {
+  .hero-img {
+    max-width: 65%;
+  }
+
+  .floatingSideButtons {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floatingSideButtons {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    flex-direction: row;
+    gap: 0.8rem;
+    transform: none;
+  }
+
+  .side-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+
+  .hero-img {
+    max-width: 75%;
+  }
+}
+
+
+
+
+
+/* === NAVBAR === */
+.navBar {
+  background: rgb(1, 4, 48);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === MAIN CONTAINER === */
+.meetContainer {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, rgb(1, 4, 48) 40%, rgb(20, 20, 60));
+  color: white;
+  display: flex;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+/* LEFT PANEL */
+.leftPanel {
+  flex: 1;
+  max-width: 600px;
+}
+
+.leftPanel h2 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.joinBox .meeting-input {
+  width: 250px;
+}
+
+.join-btn {
+  height: 56px;
+}
+
+/* RIGHT PANEL */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  max-width: 400px;
+  width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.home-image:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 992px) {
+  .leftPanel h2 {
+    font-size: 1.8rem;
+  }
+  .joinBox .meeting-input {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meetContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .leftPanel h2 {
+    font-size: 1.6rem;
+  }
+
+  .joinBox {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-image {
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftPanel h2 {
+    font-size: 1.4rem;
+  }
+  .home-image {
+    max-width: 260px;
+  }
+}
