@@ -12,12 +12,11 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
 
-
-import server from '../environment';
+import API_URL from '../environment';
 
 // const server_url = "http://localhost:8000";   // these is the backend connection on the local system 
 
-const server_url = server;
+const server_url = API_URL;    // These is the connection of the environment variable 
 
 var connections = {};
 

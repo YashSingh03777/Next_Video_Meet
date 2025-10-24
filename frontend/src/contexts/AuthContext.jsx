@@ -2,8 +2,7 @@ import axios from "axios";
 import httpStatus from "http-status";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import server from "../environment";
-
+import API_URL from "../environment";
 
 
 // Create context
@@ -15,10 +14,22 @@ export const AuthContext = createContext({});
 // });                                                 
 
 
-// now we are going to connect with render.com to get live...
+// now we are going to connect with render.com to get live...  Method-1
+// const client = axios.create({
+//   baseURL: `${server}/api/v1/users`
+// })
+
+
+// Method-2
+
 const client = axios.create({
-  baseURL: `${server}/api/v1/users`
-})
+  baseURL: `${API_URL}/api/v1/users`,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+
 
 export const AuthProvider = ({ children }) => {
   const authContext = useContext(AuthContext);
