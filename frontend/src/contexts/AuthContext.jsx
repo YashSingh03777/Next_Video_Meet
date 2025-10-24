@@ -2,14 +2,23 @@ import axios from "axios";
 import httpStatus from "http-status";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import server from "../environment";
+
+
 
 // Create context
 export const AuthContext = createContext({});
 
 // Axios client instance
+// const client = axios.create({
+//   baseURL: "http://localhost:8000/api/v1/users",   these is the backend connection on the local system 
+// });                                                 
+
+
+// now we are going to connect with render.com to get live...
 const client = axios.create({
-  baseURL: "http://localhost:8000/api/v1/users",
-});
+  baseURL: `${server}/api/v1/users`
+})
 
 export const AuthProvider = ({ children }) => {
   const authContext = useContext(AuthContext);
