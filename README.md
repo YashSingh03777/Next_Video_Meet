@@ -102,6 +102,7 @@ The app will now be available at https://nextmeetfrontend.onrender.com/
 
 ---
 ----> These is the Folder  Structure that I have done. 
+
 ├── .gitignore
 ├── Backend
     ├── package-lock.json
