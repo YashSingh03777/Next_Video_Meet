@@ -89,8 +89,7 @@ npm run server
 npm run dev
 ```
 
-The app will now be available at **[http://localhost:3000](http://localhost:3000)** 🚀
-
+The app will now be available at https://nextmeetfrontend.onrender.com/
 ---
 
 ## 📱 How It Works
@@ -102,6 +101,65 @@ The app will now be available at **[http://localhost:3000](http://localhost:3000
 5. **End or leave the meeting:** Exit anytime — all sessions end securely.
 
 ---
+----> These is the Folder  Structure that I have done. 
+├── .gitignore
+├── Backend
+    ├── package-lock.json
+    ├── package.json
+    └── src
+    │   ├── .env
+    │   ├── app.js
+    │   ├── controllers
+    │       ├── socketManager.js
+    │       └── userController.js
+    │   ├── models
+    │       ├── activityModel.js
+    │       ├── meetingModel.js
+    │       └── userModel.js
+    │   └── routes
+    │       └── userRoutes.js
+├── README.md
+└── frontend
+    ├── .gitignore
+    ├── README.md
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── public
+        ├── background.png
+        ├── index.html
+        ├── logo3.png
+        ├── manifest.json
+        ├── mobile (1).png
+        ├── robots.txt
+        └── vite.svg
+    ├── src
+        ├── App.css
+        ├── App.jsx
+        ├── assets
+        │   └── react.svg
+        ├── contexts
+        │   ├── AuthContext.jsx
+        │   └── backendCodeWorkspace
+        ├── environment.js
+        ├── index.css
+        ├── main.jsx
+        ├── pages
+        │   ├── VideoMeet.jsx
+        │   ├── authentication.jsx
+        │   ├── history.jsx
+        │   ├── home.jsx
+        │   └── landing.jsx
+        ├── styles
+        │   └── videoComponent.module.css
+        └── utils
+        │   └── withAuth.jsx
+    ├── static.json
+    └── vite.config.js
+
+
+/.gitignore:
 ---
 
 ## 🧠 Future Enhancements
